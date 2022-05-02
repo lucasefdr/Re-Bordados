@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,7 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+.title {
   font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
@@ -71,6 +75,76 @@ h1 {
 }
 
 /*===== LAYOUT =====*/
+/*===== NAVIGATION =====*/
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color);
+}
+
+/* Efeito do traço embaixo dos itens do menu */
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+
+  transition: width 0.2s;
+}
+
+/* Efeito do traço embaixo dos itens do menu */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Config. do Menu (mostrar menu) */
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -82,14 +156,6 @@ h1 {
   left: 0;
   z-index: 100;
   background-color: var(--body-color);
-}
-
-nav {
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .logo {
@@ -116,7 +182,7 @@ nav {
 }
 
 main {
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 2rem);
 }
 
 /*===== HOME =====*/
@@ -166,3 +232,5 @@ main {
 #home .text p {
   margin-bottom: 2rem;
 }
+
+/*===== SOBRE =====*/
