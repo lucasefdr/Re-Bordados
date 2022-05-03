@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rê Bordados</title>
 
-    <!-- Styles-->
-    <link rel="stylesheet" href="style.css" />
-
     <!-- Ícones -->
     <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Styles-->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header id="header">
@@ -28,7 +34,9 @@
           <ul class="grid">
             <li><a class="title" href="#home">Início</a></li>
             <li><a class="title" href="#about">Sobre</a></li>
-            <li><a class="title" href="#services">Bordados</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#bordados">Bordados</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
             <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div>
@@ -57,6 +65,7 @@
 
       <div class="divider-1"></div>
 
+      <!-- SOBRE -->
       <section id="about" class="section">
         <div class="container grid">
           <div class="image">
@@ -93,15 +102,144 @@
 
       <div class="divider-2"></div>
 
+      <!-- SERVIÇOS -->
       <section id="services" class="section">
-        <div class="container grid"></div>
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Lorem ipsum <strong>dolor</strong> sit amet consectetur
+              adipisicing elit. Deleniti, sunt quaerat. Nesciunt expedita quae
+              eius. Quo amet iusto vero eligendi temporibus aliquid accusamus
+              dolores! Aliquam qui voluptas asperiores earum. Nihil?
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-"></i>
+              <h3 class="title">Toalhas</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                itaque, ducimus omnis nostrum libero excepturi repudiandae
+                similique? Ea aliquam voluptas quos ex labore molestias
+                reprehenderit iure excepturi corrupti vel. Voluptate.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-"></i>
+              <h3 class="title">Chaveiros</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                placeat incidunt ullam maiores sapiente ipsa labore, officiis
+                reiciendis tempora, qui magnam laudantium corrupti eaque
+                similique necessitatibus animi, vitae minima sunt?
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-"></i>
+              <h3 class="title">Escolar</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+                cum doloribus, voluptatibus officia aperiam maiores
+                exercitationem a dignissimos labore eaque unde explicabo
+                reiciendis amet nesciunt eos placeat quibusdam distinctio quos!
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <div class="divider-1"></div>
+
+      <!-- BORDADOS -->
+      <section id="bordados" class="section">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Bordados</h2>
+          </header>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- DEPOIMENTOS -->
+      <section id="testimonials" class="section">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos</h2>
+          </header>
+          <div class="testimonials swiper">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis repudiandae consectetur vel veritatis ipsam aut magni
+                    obcaecati alias nemo distinctio neque sunt ratione inventore
+                    error aspernatur doloremque dolor, aliquam minima.
+                  </p>
+                  <cite>
+                    <img src="assets/images/IMG_8191.JPG" alt="" />Lucas
+                    Eduardo</cite
+                  >
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis repudiandae consectetur vel veritatis ipsam aut magni
+                    obcaecati alias nemo distinctio neque sunt ratione inventore
+                    error aspernatur doloremque dolor, aliquam minima.
+                  </p>
+                  <cite>
+                    <img src="assets/images/IMG_8191.JPG" alt="" />Lucas
+                    Eduardo</cite
+                  >
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis repudiandae consectetur vel veritatis ipsam aut magni
+                    obcaecati alias nemo distinctio neque sunt ratione inventore
+                    error aspernatur doloremque dolor, aliquam minima.
+                  </p>
+                  <cite>
+                    <img src="assets/images/IMG_8191.JPG" alt="" />Lucas
+                    Eduardo</cite
+                  >
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTATO -->
       <section id="contact" class="section">
-        <div class="container grid"></div>
+        <div class="container grid">
+          <header>
+            <h2 class="title">Contatos</h2>
+          </header>
+        </div>
       </section>
     </main>
 
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
     <script src="main.js"></script>
   </body>
 </html>
