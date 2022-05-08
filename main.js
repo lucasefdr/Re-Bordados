@@ -41,3 +41,23 @@ const swiper = new Swiper(".swiper", {
   mousewheel: true,
   keyboard: true,
 });
+
+// Scroll Reveal - mostrar elementos quando der scroll na página
+const optionsSR = {
+  origin: "top",
+  distance: "30px",
+  duration: 900,
+  reset: true,
+};
+
+ScrollReveal().reveal(
+  `
+#home .text, #home .image, 
+#about .text, #about .image,
+#services header, #services .card,
+#bordados header, #home .bordados,
+#testimonials header, #home .testimonials,
+#contact .text, #contact .links
+`,
+  optionsSR
+);
