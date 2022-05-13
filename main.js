@@ -19,10 +19,10 @@ for (const element of links) {
 }
 
 // Mudar o header da página quando der scroll
-const header = document.querySelector("header");
-const navHeight = header.offsetHeight;
+function changeHeaderWhenScroll() {
+  const header = document.querySelector("header");
+  const navHeight = header.offsetHeight;
 
-window.addEventListener("scroll", function () {
   if (this.window.scrollY >= navHeight) {
     // Scroll maior que a altura do header
     header.classList.add("scroll");
@@ -30,7 +30,7 @@ window.addEventListener("scroll", function () {
     // Scroll menor que a altura do header
     header.classList.remove("scroll");
   }
-});
+}
 
 // Testimonials carousel
 const swiper = new Swiper(".swiper", {
@@ -38,7 +38,6 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-  mousewheel: true,
   keyboard: true,
 });
 
@@ -57,7 +56,26 @@ ScrollReveal().reveal(
 #services header, #services .card,
 #bordados header, #home .bordados,
 #testimonials header, #home .testimonials,
-#contact .text, #contact .links
+#contact .text, #contact .links,
+footer .brand, footer .social
 `,
   optionsSR
 );
+
+window.addEventListener("scroll", function () {});
+
+// Botão Voltar para o Topo (Back to top)
+function backToTop() {
+  const backToTopButton = document.querySelector(".back-to-top");
+
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", function () {
+  changeHeaderWhenScroll();
+  backToTop();
+});
