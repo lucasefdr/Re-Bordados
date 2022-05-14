@@ -39,6 +39,13 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
   keyboard: true,
+  // Configurações de telas
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+    },
+  },
 });
 
 // Scroll Reveal - mostrar elementos quando der scroll na página
