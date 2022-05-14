@@ -575,10 +575,19 @@ footer .social a:hover {
     padding: 10rem 0;
   }
 
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   main {
     margin-top: var(--header-height) + 2rem;
   }
 
+  /* NAV */
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -633,6 +642,29 @@ footer .social a:hover {
     order: 0;
     max-width: 24rem;
     text-align: left;
+  }
+
+  /* SOBRE */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* SERVIÇOS */
+  .cards {
+    /* Divisão de colunas flexíveis */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* DEPOIMENTOS */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
