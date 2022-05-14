@@ -108,8 +108,10 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav .menu ul li a.title.active {
   color: var(--base-color);
+  font-weight: bold;
 }
 
 /* Efeito do traço embaixo dos itens do menu */
@@ -127,15 +129,22 @@ nav ul li a::after {
 }
 
 /* Efeito do traço embaixo dos itens do menu */
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
+}
+
+nav .menu ul li a.title:hover,
+nav .menu ul li a.title {
+  font-weight: bold;
+  -webkit-font-smoothing: auto;
 }
 
 nav .menu {
   opacity: 0;
   visibility: hidden;
 
-  /* Efeito do botom vindo de cima */
+  /* Efeito do botão vindo de cima */
   top: -20rem;
   transition: 0.2s;
 }
@@ -216,10 +225,7 @@ nav.show div.icon-cross {
   transition: 0.5s;
 }
 
-#header.scroll .logo span {
-  color: white;
-}
-
+#header.scroll .logo span,
 #header.scroll .icon-menu {
   color: white;
 }
@@ -601,10 +607,13 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
   }
 
-  #header.scroll nav ul li a:hover {
-    color: var(--base-color-second);
+  #header.scroll nav ul li a:hover,
+  #header.scroll nav ul li a.active {
+    color: white;
+    font-weight: bold;
   }
 
   /* Efeito do traço embaixo dos itens do menu */
