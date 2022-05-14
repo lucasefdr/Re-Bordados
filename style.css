@@ -666,6 +666,32 @@ footer .social a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* CONTATO */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* FOOTER */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* LOGO */
+  footer .logo {
+    font-size: 2.25rem;
+  }
 }
 
 /* large devices: 1023 > */
