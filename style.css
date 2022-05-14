@@ -36,6 +36,9 @@ img {
 
   /* Fonts */
   --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 
 /*===== BASE =====*/
@@ -45,14 +48,14 @@ html {
 }
 
 body {
-  font: 400 1rem "DM Sans", sans-serif;
+  font: 400 1rem var(--body-font);
   background: var(--body-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 var(--title-font-size) "Poppins", sans-serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -65,7 +68,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem "DM Sans", sans-serif;
+  font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
 
@@ -222,7 +225,7 @@ nav.show div.icon-cross {
 }
 
 .logo {
-  font: 700 1.31rem "Poppins", sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 
@@ -245,7 +248,7 @@ nav.show div.icon-cross {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
@@ -258,6 +261,10 @@ nav.show div.icon-cross {
 
 .section header p strong {
   color: var(--base-color);
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 main {
@@ -475,13 +482,14 @@ main {
 #contact ul li {
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 
-#contact ul li i {
-  color: var(--base-color);
+#contact ul li p {
+  color: var(--text-color);
 }
 
-/*===== CONTATO =====*/
+/*===== FOOTER =====*/
 footer {
   background: var(--base-color);
 }
@@ -501,12 +509,20 @@ footer i {
   color: var(--text-color-light);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .social a {
-  margin-right: 2rem;
-  transition: .2s;
+  transition: 0.2s;
   display: inline-block;
 }
 
+footer .social {
+  /* grid como coluna */
+  grid-auto-flow: column;
+  width: fit-content;
+}
 
 /* Efeito de 'pular' o botão */
 footer .social a:hover {
@@ -544,16 +560,90 @@ footer .social a:hover {
 
 /*===== RESPONSIVO =====*/
 /* extra large devices: 1200 > */
-@media(min-width: 992px ) {
-  
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.1256rem;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  main {
+    margin-top: var(--header-height) + 2rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  }
+
+  #header.scroll nav ul li a:hover {
+    color: var(--base-color-second);
+  }
+
+  /* Efeito do traço embaixo dos itens do menu */
+  nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--base-color-second);
+
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+
+    transition: width 0.2s;
+  }
+
+  nav .icon-menu {
+    /* Não aparece */
+    display: none;
+  }
+
+  /* HOME */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #home .image {
+    /* Altera ordem dos elementos - Só é possível porque está numa caixa grid */
+    order: 1;
+  }
+
+  #home .text {
+    /* Altera ordem dos elementos - Só é possível porque está numa caixa grid */
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
 }
 
 /* large devices: 1023 > */
 
 /* large devices: 992 > */
-@media(min-width: 992px ) {
+@media (min-width: 992px) {
   :root {
-    --title-font-size: 2.2rem;
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
   }
 }
+
 /* medium devices: 767 */
