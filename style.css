@@ -535,6 +535,11 @@ footer .social a:hover {
   transform: translateY(-8px);
 }
 
+a.dev {
+  color: var(--title-color);
+  font-weight: bold;
+}
+
 /*===== BACK TO TOP =====*/
 .back-to-top {
   background: var(--base-color);
