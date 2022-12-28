@@ -401,6 +401,18 @@ main {
   margin-bottom: 0.75rem;
 }
 
+/*===== BORDADOS =====*/
+img.bordados {
+  width: 25rem;
+  height: 30rem;
+  border: 4px solid var(--base-color-second);
+}
+
+a.bordados,
+a:active.bordados {
+  color: var(--base-color-second);
+}
+
 /*===== DEPOIMENTOS =====*/
 #testimonials {
   background: white;
